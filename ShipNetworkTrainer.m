@@ -49,40 +49,10 @@ function trainedNet = ShipNetworkTrainer(isNew)
     %% Return the Trained Network
     trainedNet.accuracy = testAccuracy;
     trainedNet.network = network;
+    trainedNet.test = testData;
     
-    %% Output Example Images
-    figure
-    p = 1:20:400;
-%     for i = 1:numel(p)
-%         subplot(4, 5, i);
-%         
-%         I = readimage(testData, p(i));
-%         
-%         label = strcat(char(correctLabels(p(i))), " vs. ", char(shipPredictions(p(i))));
-%         
-%         imshow(I)
-%         title(label)
-%     end
-    
-    for i = 1:numel(p)
-        figure
-        I = readimage(testData, p(i));
-        act1 = activations(network, I, 'conv1', 'OutputAs', 'channels');
-        act2 = activations(network, I, 'conv2', 'OutputAs', 'channels');
-        act3 = activations(network, I, 'conv3', 'OutputAs', 'channels');
-        
-        sz1 = size(act1);
-        sz2 = size(act2);
-        sz3 = size(act3);
-        
-        act1 = reshape(act1,[sz1(1) sz1(2) 1 sz1(3)]);
-        act2 = reshape(act2,[sz2(1) sz2(2) 1 sz2(3)]);
-        act3 = reshape(act3,[sz3(1) sz3(2) 1 sz3(3)]);
-        
-        allActs = cat(3, act1, act2, act3);
-        
-        montage(allActs,'Size',[24 32])
-    end
+
+
 end
 
 function exportWeightsAndBiases(filename, network)

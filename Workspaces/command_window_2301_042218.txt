@@ -1,0 +1,234 @@
+>> ShipNetworkTrainer
+Initializing image normalization.
+|========================================================================================|
+|  Epoch  |  Iteration  |  Time Elapsed  |  Mini-batch  |  Mini-batch  |  Base Learning  |
+|         |             |   (hh:mm:ss)   |   Accuracy   |     Loss     |      Rate       |
+|========================================================================================|
+|       1 |           1 |       00:00:06 |       48.00% |       0.6943 |          0.0020 |
+|       5 |          50 |       00:00:36 |       82.00% |       0.4343 |          0.0020 |
+|      10 |         100 |       00:01:05 |       93.00% |       0.1368 |          0.0020 |
+|      15 |         150 |       00:01:36 |       96.00% |       0.1297 |          0.0020 |
+|      20 |         200 |       00:02:05 |       98.00% |       0.0463 |          0.0020 |
+|========================================================================================|
+
+testAccuracy =
+
+    0.8875
+
+
+ans = 
+
+  struct with fields:
+
+    preTrainingFilePath: "ShipConvNet_WeightsAndBiases.mat"
+               accuracy: 0.8875
+                network: [1×1 SeriesNetwork]
+
+>> ShipNetworkTrainer
+Initializing image normalization.
+|========================================================================================|
+|  Epoch  |  Iteration  |  Time Elapsed  |  Mini-batch  |  Mini-batch  |  Base Learning  |
+|         |             |   (hh:mm:ss)   |   Accuracy   |     Loss     |      Rate       |
+|========================================================================================|
+|       1 |           1 |       00:00:00 |       31.00% |       0.6945 |          0.0020 |
+|       5 |          50 |       00:00:27 |       76.00% |       0.5542 |          0.0020 |
+|      10 |         100 |       00:00:54 |       93.00% |       0.1575 |          0.0020 |
+|      15 |         150 |       00:01:21 |       98.00% |       0.0565 |          0.0020 |
+|      20 |         200 |       00:01:48 |       98.00% |       0.0616 |          0.0020 |
+|========================================================================================|
+
+testAccuracy =
+
+    0.9300
+
+
+ans = 
+
+  struct with fields:
+
+    preTrainingFilePath: "ShipConvNet_WeightsAndBiases.mat"
+               accuracy: 0.9300
+                network: [1×1 SeriesNetwork]
+
+Undefined function or variable 'testData'.
+
+Error in ShipNetworkTrainer (line 59)
+        I = readimage(testData, p(i));
+
+>> ShipNetworkTrainer
+Initializing image normalization.
+|========================================================================================|
+|  Epoch  |  Iteration  |  Time Elapsed  |  Mini-batch  |  Mini-batch  |  Base Learning  |
+|         |             |   (hh:mm:ss)   |   Accuracy   |     Loss     |      Rate       |
+|========================================================================================|
+|       1 |           1 |       00:00:00 |       61.00% |       0.6920 |          0.0020 |
+|       5 |          50 |       00:00:26 |       85.00% |       0.3930 |          0.0020 |
+|      10 |         100 |       00:00:53 |       93.00% |       0.1789 |          0.0020 |
+|      15 |         150 |       00:01:21 |       98.00% |       0.0439 |          0.0020 |
+|      20 |         200 |       00:01:48 |       94.00% |       0.1698 |          0.0020 |
+|========================================================================================|
+
+testAccuracy =
+
+    0.9100
+
+
+ans = 
+
+  struct with fields:
+
+    preTrainingFilePath: "ShipConvNet_WeightsAndBiases.mat"
+               accuracy: 0.9100
+                network: [1×1 SeriesNetwork]
+
+>> ShipNetworkTrainer
+Initializing image normalization.
+|========================================================================================|
+|  Epoch  |  Iteration  |  Time Elapsed  |  Mini-batch  |  Mini-batch  |  Base Learning  |
+|         |             |   (hh:mm:ss)   |   Accuracy   |     Loss     |      Rate       |
+|========================================================================================|
+|       1 |           1 |       00:00:00 |       50.00% |       0.6929 |          0.0020 |
+|       5 |          50 |       00:00:32 |       83.00% |       0.5065 |          0.0020 |
+|      10 |         100 |       00:01:00 |       91.00% |       0.2090 |          0.0020 |
+|      15 |         150 |       00:01:27 |       99.00% |       0.0530 |          0.0020 |
+|      20 |         200 |       00:01:55 |       99.00% |       0.0440 |          0.0020 |
+|========================================================================================|
+
+testAccuracy =
+
+    0.9200
+
+
+ans = 
+
+  struct with fields:
+
+    preTrainingFilePath: "ShipConvNet_WeightsAndBiases.mat"
+               accuracy: 0.9200
+                network: [1×1 SeriesNetwork]
+
+>> ShipNetworkTrainer
+Initializing image normalization.
+|========================================================================================|
+|  Epoch  |  Iteration  |  Time Elapsed  |  Mini-batch  |  Mini-batch  |  Base Learning  |
+|         |             |   (hh:mm:ss)   |   Accuracy   |     Loss     |      Rate       |
+|========================================================================================|
+|       1 |           1 |       00:00:01 |       44.00% |       0.6928 |          0.0020 |
+|       5 |          50 |       00:00:27 |       76.00% |       0.5192 |          0.0020 |
+|      10 |         100 |       00:00:54 |       93.00% |       0.1816 |          0.0020 |
+|      15 |         150 |       00:01:25 |       98.00% |       0.1471 |          0.0020 |
+|      20 |         200 |       00:01:55 |       97.00% |       0.0439 |          0.0020 |
+|========================================================================================|
+
+testAccuracy =
+
+    0.9525
+
+Error using cat
+Dimensions of arrays being concatenated are not consistent.
+
+Error in ShipNetworkTrainer (line 82)
+        allActs = cat(3, act1, act2, act3);
+ 
+>> ShipNetworkTrainer
+Initializing image normalization.
+|========================================================================================|
+|  Epoch  |  Iteration  |  Time Elapsed  |  Mini-batch  |  Mini-batch  |  Base Learning  |
+|         |             |   (hh:mm:ss)   |   Accuracy   |     Loss     |      Rate       |
+|========================================================================================|
+|       1 |           1 |       00:00:01 |       42.00% |       0.6935 |          0.0020 |
+|       5 |          50 |       00:00:31 |       83.00% |       0.4291 |          0.0020 |
+|      10 |         100 |       00:01:00 |       97.00% |       0.0872 |          0.0020 |
+|      15 |         150 |       00:01:29 |       94.00% |       0.2025 |          0.0020 |
+|      20 |         200 |       00:01:58 |       96.00% |       0.1420 |          0.0020 |
+|========================================================================================|
+
+testAccuracy =
+
+    0.9100
+
+Error using images.internal.createMontage>getOneImage (line 327)
+Multi-plane image inputs must be RGB images of size MxNx3.
+
+Error in images.internal.createMontage>getImages (line 194)
+img = getOneImage(imgSource,useIndexedRead, idxs(1), cmap);
+
+Error in images.internal.createMontage (line 65)
+    imageArray = getImages(imgSrc, thumbnailSize, borderSize, backgroundColor, indices, cmap);
+
+Error in montage (line 170)
+[bigImage, cmap] = images.internal.createMontage(Isrc, thumbnailSize,...
+
+Error in ShipNetworkTrainer (line 84)
+        montage(allActs,'Size',[24 32])
+ 
+>> GetImages()
+>> GetImages().getMontage()
+Error: Functions cannot be indexed using {} or . indexing.
+ 
+>> getMontage()
+Undefined function or variable 'getMontage'.
+ 
+>> getMontage()
+Undefined function or variable 'getMontage'.
+ 
+>> trainedNetwork = ShipNetworkTrainer()
+Initializing image normalization.
+|========================================================================================|
+|  Epoch  |  Iteration  |  Time Elapsed  |  Mini-batch  |  Mini-batch  |  Base Learning  |
+|         |             |   (hh:mm:ss)   |   Accuracy   |     Loss     |      Rate       |
+|========================================================================================|
+|       1 |           1 |       00:00:00 |       56.00% |       0.6928 |          0.0020 |
+|       5 |          50 |       00:00:26 |       90.00% |       0.2769 |          0.0020 |
+|      10 |         100 |       00:00:53 |       95.00% |       0.1312 |          0.0020 |
+|      15 |         150 |       00:01:20 |       98.00% |       0.0602 |          0.0020 |
+|      20 |         200 |       00:01:47 |       95.00% |       0.1021 |          0.0020 |
+|========================================================================================|
+
+testAccuracy =
+
+    0.9475
+
+
+trainedNetwork = 
+
+  struct with fields:
+
+    preTrainingFilePath: "ShipConvNet_WeightsAndBiases.mat"
+               accuracy: 0.9475
+                network: [1×1 SeriesNetwork]
+                   test: [1×1 matlab.io.datastore.ImageDatastore]
+
+>> GetImages(trainedNetwork.network, trainedNetwor.test)
+Undefined variable "trainedNetwor" or class "trainedNetwor.test".
+ 
+Did you mean:
+>> GetImages(trainedNetwork.network, trainedNetwork.test)
+Error using images.internal.createMontage (line 121)
+SIZE must be big enough to include all frames in I.
+
+Error in montage (line 170)
+[bigImage, cmap] = images.internal.createMontage(Isrc, thumbnailSize,...
+
+Error in GetImages>getMontage (line 32)
+    montage(act3,'Size',[8 8])
+
+Error in GetImages (line 6)
+    getMontage(network, 80, testData);
+ 
+>> GetImages(trainedNetwork.network, trainedNetwork.test)
+>> GetImages
+Not enough input arguments.
+
+Error in GetImages (line 7)
+    getTestExamples(network, testData);
+ 
+>> GetImages(trainedNetwork.network, trainedNetwork.test)
+>> GetImages
+Not enough input arguments.
+
+Error in GetImages (line 6)
+    getMontage(network, 380, testData);
+ 
+>> GetImages(trainedNetwork.network, trainedNetwork.test)
+>> 
