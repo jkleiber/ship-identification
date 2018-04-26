@@ -8,7 +8,8 @@
 
 function GetImages(network, testData)
     %getMontage(network, 380, testData);
-    getTestExamples(network, testData);
+    %getTestExamples(network, testData);
+    getWrongImages(network, testData);
 end
 
 %% Get Conv Progressions of an Image
@@ -53,4 +54,39 @@ function getTestExamples(network, testData)
         imshow(I)
         title(label)
     end
+end
+
+function getWrongImages(network, testData)
+    shipPredictions = classify(network, testData);
+    correctLabels = testData.Labels;  
+    
+    X = zeros(20);
+    xx = 1;
+    
+    for i=1:numel(shipPredictions)
+       if shipPredictions(i) ~= correctLabels(i) 
+          X(xx) = i; 
+          xx = xx + 1;
+       end
+       if xx > 21
+           break;
+       end
+    end
+    
+    figure
+    for i = 1:21
+        subplot(3, 7, i);
+        
+        I = readimage(testData, X(i));
+        
+        imageLabel = strcat('Img ', num2str(X(i)));
+        labelLabel = strcat('L: ', char(correctLabels(X(i))));
+        predictLabel = strcat('P: ', char(shipPredictions(X(i))));
+        label = {imageLabel ;  labelLabel; predictLabel};
+        
+        imshow(I)
+        title(label)
+    end
+    
+    totalIncorrect = sum(shipPredictions ~= correctLabels)
 end
