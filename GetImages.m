@@ -2,12 +2,19 @@
 % I used the following links to generate some of these graphics:
 % ---- https://www.mathworks.com/help/nnet/examples/visualize-activations-of-a-convolutional-neural-network.html
 
+%% Notes
+% Images: 1681, 1644, 1723, 1648 good examples of correct full ships
+% Images: 498 -> good examples of mis-identified images (partial ship
+% identified as ship)
+% Images: 284 -> good example of correctly identified image (partial ship
+% classified as not ship)
+
 %% Get Pretty Figures fast with Feedforward mode only (No Training)
 % Train the network once and get the pictures here so it is faster
 % to generate figures.
 
 function GetImages(network, testData)
-    %getMontage(network, 380, testData);
+    %getMontage(network, 1644, testData);
     %getTestExamples(network, testData);
     getWrongImages(network, testData);
 end
@@ -43,13 +50,17 @@ function getTestExamples(network, testData)
     correctLabels = testData.Labels;    
 
     figure
-    p = 1:10:400;
+    %p = 1:10:400;
+    p = round(1800 * rand(1,40));
     for i = 1:numel(p)
         subplot(5, 8, i);
         
         I = readimage(testData, p(i));
         
-        label = strcat(char(correctLabels(p(i))), " vs. ", char(shipPredictions(p(i))));
+        imageLabel = strcat('Img ', num2str(p(i)));
+        labelLabel = strcat('L: ', char(correctLabels(p(i))));
+        predictLabel = strcat('P: ', char(shipPredictions(p(i))));
+        label = {imageLabel ;  labelLabel; predictLabel};
         
         imshow(I)
         title(label)

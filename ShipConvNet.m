@@ -16,7 +16,7 @@ inputLayer = imageInputLayer([80 80 3], 'Name', 'input');
 % Spatial Extent: 3x3
 % Stride: 1
 % Zero Padding: 1
-% Number of filters: 16
+% Number of filters: 64
 convLayer1 = convolution2dLayer(3, 64, 'Stride', 1, 'Padding', 1, 'Name', 'conv1');
 
 %% First ReLU Layer
@@ -26,7 +26,7 @@ reluLayer1 = reluLayer();
 % Spatial Extent: 3x3
 % Stride: 1
 % Zero Padding: 1
-% Number of Filters: 16
+% Number of Filters: 64
 convLayer2 = convolution2dLayer(3, 64, 'Stride', 1, 'Padding', 1, 'Name', 'conv2');
 
 %% Second ReLU Layer
@@ -41,7 +41,7 @@ poolLayer1 = maxPooling2dLayer(2, 'Stride', 2, 'Name', 'pool1');
 % Spatial Extent: 3x3
 % Stride: 1
 % Zero Padding: 1
-% Number of Filters: 8
+% Number of Filters: 128
 convLayer3 = convolution2dLayer(3, 128, 'Stride', 1, 'Padding', 1, 'Name', 'conv3');
 
 %% Third ReLU Layer
@@ -51,7 +51,7 @@ reluLayer3 = reluLayer();
 % Spatial Extent: 3x3
 % Stride: 1
 % Zero Padding: 1
-% Number of Filters: 8
+% Number of Filters: 128
 convLayer4 = convolution2dLayer(3, 128, 'Stride', 1, 'Padding', 1, 'Name', 'conv4');
 
 %% Fourth ReLU Layer
